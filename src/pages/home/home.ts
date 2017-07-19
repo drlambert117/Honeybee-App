@@ -16,7 +16,7 @@ export class HomePage {
   goToHoneybeePage() {
     console.log("goToHoneybeePage() function was called.");
 
-    this.navCtrl.push(HoneybeePage);
+    this.navCtrl.setRoot(HoneybeePage);
 
   }
 

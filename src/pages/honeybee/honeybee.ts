@@ -16,7 +16,7 @@ export class HoneybeePage {
   goToFastFactsPage() {
     console.log("goToFastFactsPage() function was called.");
 
-    this.navCtrl.push(FastFactsPage);
+    this.navCtrl.setRoot(FastFactsPage);
 
   }
 
