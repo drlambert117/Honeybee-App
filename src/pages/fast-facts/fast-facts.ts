@@ -16,7 +16,7 @@ export class FastFactsPage {
   goToAnatomyPage() {
     console.log("goToAnatomyPage() function called.");
 
-    this.navCtrl.push(AnatomyPage);
+    this.navCtrl.setRoot(AnatomyPage);
 
   }
 
