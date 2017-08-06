@@ -18,49 +18,57 @@
 
     <ion-card-content>
 
-      <h1> <br /> A Honeybee's thorax can be further broken down into 3 main components:<b> the Wings, Legs, and Pollen Baskets. </b></h1> <br /> <br />
+      <h1> <br /> A Honeybee's thorax can be further broken down into 3 main components:<b> the Wings, Legs, and Pollen Baskets. </b></h1>
+      <br /> <br />
 
-        <h1> <b>  <u> The Wings </u> </b> </h1> <br />
+      <h1> <b>  <u> The Wings </u> </b> </h1> <br />
 
-        <ion-avatar>
-                <img src="assets/images/honeybee-wings.jpg" />
-            </ion-avatar> <br /> <br />
+      <ion-avatar>
+        <img src="assets/images/honeybee-wings.jpg" id="honeybee-wings" (click)="enlargePhotograph('honeybee-wings')"/>
+      </ion-avatar> <br /> <br />
 
-      <h2> The wings of the Honeybee, aranged in two pairs on the thorax are connected by a row of hooks on the back wing. 
-      The fore wings are substantially bigger than the hind wings but they both aid in flight. <br /> <br />
-
-      The bee is able to lift off by giving a propeller like twist to each wing during the up and down strokes.
-      Pulsating muscles located in the thorax allow the bee to travel at 15 miles per hour and maintain a range up to three miles from the hive, expanding their area of pollination.
+      <h2> The wings of the Honeybee, aranged in two pairs on the thorax are connected by a row of hooks on the back wing. The
+        fore wings are substantially bigger than the hind wings but they both aid in flight. <br /> <br /> The bee is able
+        to lift off by giving a propeller like twist to each wing during the up and down strokes. Pulsating muscles located
+        in the thorax allow the bee to travel at 15 miles per hour and maintain a range up to three miles from the hive,
+        expanding their area of pollination.
       </h2> <br /> <br />
 
-        <h1> <b>  <u> The Legs </u> </b> </h1> <br />    
+      <h1> <b>  <u> The Legs </u> </b> </h1> <br />
 
-            <ion-avatar>
-                <img src="assets/images/honeybee-legs.jpg" />
-            </ion-avatar> <br /> <br />
+      <ion-avatar>
+        <img src="assets/images/honeybee-legs.jpg" id="honeybee-legs" (click)="enlargePhotograph('honeybee-legs')"/>
+      </ion-avatar> <br /> <br />
 
-      <h2> The Honeybee has three pairs of six segmented legs, these segments mean the legs are very flexible. 
-      The front legs are specially designed to clean the antennae, the middle set aid in collecting pollen,
-      and the rear set have a special secion devoted to pollen collection called a <b>Pollen Basket</b> (See next section).
-      Each leg has claws for gripping and sticky pads that assist the bee in landing on slick surfaces. Bees also have taste receptors on the tips of their legs. <br /> <br />
-
-      The worker bee has a different set of back legs than the other bees in the hive, containing special combs and a pollen press. These are used by to brush, collect, pack, and carry pollen and propolis back to the hive.
+      <h2> The Honeybee has three pairs of six segmented legs, these segments mean the legs are very flexible. The front legs
+        are specially designed to clean the antennae, the middle set aid in collecting pollen, and the rear set have a special
+        secion devoted to pollen collection called a <b>Pollen Basket</b> (See next section). Each leg has claws for gripping
+        and sticky pads that assist the bee in landing on slick surfaces. Bees also have taste receptors on the tips of their
+        legs. <br /> <br /> The worker bee has a different set of back legs than the other bees in the hive, containing special
+        combs and a pollen press. These are used by to brush, collect, pack, and carry pollen and propolis back to the hive.
       </h2> <br /> <br />
 
-        <h1> <b>  <u> The Pollen Baskets </u> </b> </h1> <br />
+      <h1> <b>  <u> The Pollen Baskets </u> </b> </h1> <br />
 
-            <ion-avatar>
-                <img src="assets/images/honeybee-pollen-basket.jpg" />
-            </ion-avatar> <br /> <br />
+      <ion-avatar>
+        <img src="assets/images/honeybee-pollen-basket.jpg" id="honeybee-pollen-basket-photograph" (click)="enlargePhotograph('honeybee-pollen-basket-photograph')"/>
+      </ion-avatar> <br /> <br />
 
-      <h2>The pollen basket is located the bees' hind legs and consists of hairs surrounding a concave region in which the bee stores pollen to take back to the hive.
-      When a bee visits a flower, she grooms herself and brushes the pollen sticking to her hairy body towards her hind legs. It is at this point that the middle pair of legs packs the pollen into the basket. <br /> <br />
 
-      To help keep the pollen together during flight, some nectar is mixed in. Finally, the hairs on the pollen basket hold it all in place.​
-      </h2>  
+      <h2>The pollen basket is located the bees' hind legs and consists of hairs surrounding a concave region in which the bee
+        stores pollen to take back to the hive. When a bee visits a flower, she grooms herself and brushes the pollen sticking
+        to her hairy body towards her hind legs. It is at this point that the middle pair of legs packs the pollen into the
+        basket. <br /> <br /> To help keep the pollen together during flight, some nectar is mixed in. Finally, the hairs
+        on the pollen basket hold it all in place.​
+      </h2>
 
     </ion-card-content>
 
+
   </ion-card>
+
+<div id='enlargedImageBackground'>
+
+      </div>
 
 </ion-content>
