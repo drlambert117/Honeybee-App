@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+// import { ImageEnlargeService } from '../../app/imageEnlargeService';
 
 import { FastFactsPage } from '../fast-facts/fast-facts';
 
@@ -13,10 +14,25 @@ export class HoneybeePage {
 
   }
 
+
   goToFastFactsPage() {
     console.log("goToFastFactsPage() function was called.");
 
     this.navCtrl.setRoot(FastFactsPage);
+
+  }
+
+  enlargePhotograph(id) {
+    console.log("enlargePhotograph function called!");
+    if (document.getElementById(id).className == ''  ) {
+        document.getElementById(id).className ='enlargedPhotograph';
+        document.getElementById("enlargedImageBackground").className ='enlarged';
+    }
+
+    else {
+        document.getElementById(id).className ='';
+        document.getElementById("enlargedImageBackground").className ='';
+    }
 
   }
 

@@ -15,7 +15,7 @@ export class ThoraxModal {
     this.viewCtrl.dismiss();
   }
 
-  enlargePhotograph(id) {
+enlargePhotograph(id) {
 
     if (document.getElementById(id).className == ''  ) {
         document.getElementById(id).className ='enlargedPhotograph';

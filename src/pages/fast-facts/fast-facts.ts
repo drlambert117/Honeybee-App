@@ -13,6 +13,20 @@ export class FastFactsPage {
 
   }
 
+    enlargePhotograph(id) {
+    console.log("enlargePhotograph function called!");
+    if (document.getElementById(id).className == ''  ) {
+        document.getElementById(id).className ='enlargedPhotograph';
+        document.getElementById("enlargedImageBackground").className ='enlarged';
+    }
+
+    else {
+        document.getElementById(id).className ='';
+        document.getElementById("enlargedImageBackground").className ='';
+    }
+
+  }
+
   goToAnatomyPage() {
     console.log("goToAnatomyPage() function called.");
 
