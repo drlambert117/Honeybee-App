@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
-
 //Pages
 import { HomePage } from '../pages/home/home';
 import { HoneybeePage } from '../pages/honeybee/honeybee';

@@ -17,20 +17,6 @@ export class AnatomyPage {
 
   }
 
-    enlargePhotograph(id) {
-
-    if (document.getElementById(id).className == ''  ) {
-        document.getElementById(id).className ='enlargedPhotograph';
-        document.getElementById("enlargedImageBackground").className ='enlarged';
-    }
-
-    else {
-        document.getElementById(id).className ='';
-        document.getElementById("enlargedImageBackground").className ='';
-    }
-
-  }
-
   openHeadModal() {
     let headModal = this.modalCtrl.create(HeadModal);
     headModal.present();
