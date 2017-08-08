@@ -20,7 +20,7 @@
                 a honeybee in the next section.)
             </p>
             <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_1.jpg" />
+                <img src="assets/images/honeybee_fastfacts_1.jpg" id='honeybee-fastfacts-1' (click) = "enlargePhotograph('honeybee-fastfacts-1')"/>
             </ion-avatar>
 
         </ion-card-content> 
@@ -40,7 +40,7 @@
                 The honey bee's wings stroke incredibly fast, about 200 beats per second, thus making their famous, distinctive buzz.
             </p>
             <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_2.jpg" />
+                <img src="assets/images/honeybee_fastfacts_2.jpg" id='honeybee-fastfacts-2' (click) = "enlargePhotograph('honeybee-fastfacts-2')"/>
             </ion-avatar>
 
         </ion-card-content>
@@ -59,7 +59,7 @@
             </p>
 
             <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_3.jpg" />
+                <img src="assets/images/honeybee_fastfacts_3.jpg" id='honeybee-fastfacts-3' (click) = "enlargePhotograph('honeybee-fastfacts-3')"/>
             </ion-avatar>
 
         </ion-card-content>
@@ -77,7 +77,7 @@
                 A honey bee is the only insect that produces food that humans consume.
             </p>
             <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_4.jpg" />
+                <img src="assets/images/honeybee_fastfacts_4.jpg" id='honeybee-fastfacts-4' (click) = "enlargePhotograph('honeybee-fastfacts-4')"/>
             </ion-avatar>
 
         </ion-card-content>
@@ -97,7 +97,7 @@
                 functioning.
             </p>
             <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_5.jpg" />
+                <img src="assets/images/honeybee_fastfacts_5.jpg" id='honeybee-fastfacts-5' (click) = "enlargePhotograph('honeybee-fastfacts-5')"/>
             </ion-avatar>
 
         </ion-card-content>
@@ -107,5 +107,9 @@
     <button ion-button full large color='dark' (click)='goToAnatomyPage()'>
     Next Section: Anatomy
 </button>
+
+<div id='enlargedImageBackground'>
+
+      </div>
 
 </ion-content>

@@ -11,7 +11,7 @@
 
   <ion-card>
 
-    <img src="assets/images/honeybee_2.jpg" />
+    <img src="assets/images/honeybee_2.jpg" id='honeybee-2' (click) = "enlargePhotograph('honeybee-2')"/>
 
     <ion-card-content>
       <p>
@@ -30,5 +30,9 @@
   <button ion-button full large color='dark' (click)='goToFastFactsPage()'>
   Next Section: Fast Facts
 </button>
+
+<div id='enlargedImageBackground'>
+
+      </div>
 
 </ion-content>
