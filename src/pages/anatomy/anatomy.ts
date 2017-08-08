@@ -17,6 +17,7 @@ export class AnatomyPage {
 
   }
 
+
   openHeadModal() {
     let headModal = this.modalCtrl.create(HeadModal);
     headModal.present();
