@@ -65,7 +65,7 @@ export class ThoraxModal {
       basket. <br /> <br /> To help keep the pollen together during flight, some nectar is mixed in. Finally, the hairs
       on the pollen basket hold it all in place.​`,
     },
-
+    
   ];
 
 }
