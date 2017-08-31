@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      <h3> Anatomy of the Thorax </h3>
+      <h3> {{title}} </h3>
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -17,11 +17,10 @@
   <ion-card>
 
     <ion-card-content>
-
-      <h1> <br /> A Honeybee's thorax can be further broken down into 3 main components:<b> the Wings, Legs, and Pollen Baskets. </b></h1>
+      <h1 [innerHTML]='intro'> </h1>
       <br /> <br />
 
-      <h1> <b>  <u> The Wings </u> </b> </h1> <br />
+      <h1> <b> <u> The Wings </u> </b> </h1> <br />
 
       <ion-avatar>
         <img src="assets/images/honeybee_wings.jpg" id="honeybee-wings" (click)="enlargePhotograph('honeybee-wings')"/>
