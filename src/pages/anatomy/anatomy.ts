@@ -36,4 +36,11 @@ export class AnatomyPage {
     console.log('openAbdomenModal() function has been called.');
   }
 
+  title: string = "Anatomy";
+
+  image_name: string = "assets/images/honeybee_basic_anatomy.jpg";
+
+  page_content: string = `The honeybee, though small in size, is an extremely complex creature. Like most insects, the honeybee's body is divided
+  into three parts: the head, thorax, and abdomen. Tap each anatomical part to learn more.`;
+
 }

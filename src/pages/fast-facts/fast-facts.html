@@ -3,110 +3,31 @@
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-        <ion-title>Fast Facts</ion-title>
+        <ion-title>{{title}}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-card>
+    <ion-card *ngFor="let fact_card of fact_cards">
 
-        <ion-card-title> 1. </ion-card-title>
+        <ion-card-title [innerHTML]='fact_card.id'>  </ion-card-title>
 
         <ion-card-content>
-            <p>
-                Honey bees have 6 legs, 2 compound eyes made up of thousands of tiny lenses (one on each side of the head), 3 simple eyes
-                on the top of the head, 2 pairs of wings, a nectar pouch, and a stomach. (We will explore the anatomy of
-                a honeybee in the next section.)
-            </p>
+            <p [innerHTML]='fact_card.content'>
+                
+            </p> <br />
             <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_1.jpg" id='honeybee-fastfacts-1' (click) = "enlargePhotograph('honeybee-fastfacts-1')"/>
+                <img [src]="fact_card.image_name" [id]="fact_card.id" (click)="enlargePhotograph(fact_card.id)"/>
             </ion-avatar>
 
         </ion-card-content> 
 
-
-
     </ion-card> <br />
 
-    <ion-card>
-
-        <ion-card-title>
-            2.
-        </ion-card-title>
-
-        <ion-card-content>
-            <p>
-                The honey bee's wings stroke incredibly fast, about 200 beats per second, thus making their famous, distinctive buzz.
-            </p>
-            <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_2.jpg" id='honeybee-fastfacts-2' (click) = "enlargePhotograph('honeybee-fastfacts-2')"/>
-            </ion-avatar>
-
-        </ion-card-content>
-
-    </ion-card> <br />
-
-    <ion-card>
-
-        <ion-card-title>
-            3.
-        </ion-card-title>
-
-        <ion-card-content>
-            <p>
-                A honey bee can fly for up to six miles, and as fast as 15 miles per hour.
-            </p>
-
-            <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_3.jpg" id='honeybee-fastfacts-3' (click) = "enlargePhotograph('honeybee-fastfacts-3')"/>
-            </ion-avatar>
-
-        </ion-card-content>
-
-    </ion-card> <br />
-
-    <ion-card>
-
-        <ion-card-title>
-            4.
-        </ion-card-title>
-
-        <ion-card-content>
-            <p>
-                A honey bee is the only insect that produces food that humans consume.
-            </p>
-            <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_4.jpg" id='honeybee-fastfacts-4' (click) = "enlargePhotograph('honeybee-fastfacts-4')"/>
-            </ion-avatar>
-
-        </ion-card-content>
-
-    </ion-card> <br />
-
-    <ion-card>
-
-        <ion-card-title>
-            5.
-        </ion-card-title>
-
-        <ion-card-content>
-            <p>
-                Honey is the only food that includes all the substances necessary to sustain life, including enzymes, vitamins, minerals,
-                and water; and it's the only food that contains "pinocembrin", an antioxidant associated with improved brain
-                functioning.
-            </p>
-            <ion-avatar>
-                <img src="assets/images/honeybee_fastfacts_5.jpg" id='honeybee-fastfacts-5' (click) = "enlargePhotograph('honeybee-fastfacts-5')"/>
-            </ion-avatar>
-
-        </ion-card-content>
-
-    </ion-card> <br />
-
-    <button ion-button full large color='dark' (click)='goToAnatomyPage()'>
+<button ion-button full large color='secondary' (click)='goToAnatomyPage()'>
     Next Section: Anatomy
-</button>
+</button> <br />
 
 <div id='enlargedImageBackground'>
 

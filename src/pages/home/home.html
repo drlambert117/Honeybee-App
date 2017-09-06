@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>The Mavelous Honeybee</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,18 +11,17 @@
 
   <ion-card>
 
-    <img src="assets/images/honeybee_1.png" />
+    <img [src]="image_name" />
 
     <ion-card-content>
       <p>
-        The purpose of this app is to educate about the wonders of the Honeybee and it's vital role in the natural world. Feel free
-        to follow the app in order or select a specific section from the menu to the left.
+        {{page_content}}
       </p>
     </ion-card-content>
 
   </ion-card> <br />
 
-  <button ion-button full large color='dark' (click)='goToHoneybeePage()'>
+  <button ion-button full large color='secondary' (click)='goToHoneybeePage()'>
   Section 1: What is a Honeybee?
 </button>
 

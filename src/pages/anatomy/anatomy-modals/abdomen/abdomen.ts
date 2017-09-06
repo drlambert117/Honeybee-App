@@ -29,13 +29,14 @@ export class AbdomenModal {
 
   }
 
-  title = 'Anatomy of the Abdomen';
+  title : string = 'Anatomy of the Abdomen';
   
-    intro = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
+    intro : string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
   
     sections = [
   
       {
+        id: 1,
         title:"<b> <u> The Reproductive Organs </u> </b>",
         image:"",
         description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
@@ -47,6 +48,7 @@ export class AbdomenModal {
       },
   
       {
+        id: 2,
         title:"<b> <u> The Wax Glands </u> </b>",
         image:"",
         description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
@@ -58,6 +60,7 @@ export class AbdomenModal {
       },
   
       {
+        id: 3,
         title:"<b> <u> The Stinger </u> </b>",
         image:"",
         description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
