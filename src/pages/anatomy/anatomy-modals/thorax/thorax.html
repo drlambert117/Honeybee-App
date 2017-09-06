@@ -26,8 +26,7 @@
       <h1 [innerHTML]='section.title'> </h1> <br />
 
       <ion-avatar>
-        <img [src]="section.image" />
-        <!-- id="" (click)="enlargePhotograph('')" -->
+        <img [src]="section.image" [id]="section.id" (click)="enlargePhotograph(section.id)"/>
       </ion-avatar> <br /> <br />
 
       <h2 [innerHTML]="section.description">

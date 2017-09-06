@@ -3,32 +3,35 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Anatomy</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
   <ion-card>
-    <img src="assets/images/honeybee_basic_anatomy.jpg" id='honeybee-basic-anatomy' />
+    <img [src]="image_name"/>
     <ion-card-content>
-      <p>The honeybee, though small in size, is an extremely complex creature. Like most insects, the honeybee's body is divided
-        into three parts: the head, thorax, and abdomen. Tap each anatomical part to learn more.</p>
+      <p>{{page_content}}</p>
     </ion-card-content> <br />
 
     <button ion-button full large color='dark' id="btn-head" (click)='openHeadModal()'>
     The Head
-  </button>
+  </button> 
 
     <button ion-button full large color='dark' id="btn-thorax" (click)='openThoraxModal()'>
     The Thorax
-  </button>
+  </button> 
 
     <button ion-button full large color='dark' id="btn-abdomen" (click)='openAbdomenModal()'>
     The Abdomen
-  </button>
+  </button> 
 
-  </ion-card>
+  </ion-card> <br /> 
+  
+  <button ion-button full large color='secondary' id='btn-next-page'>
+    Next Page
+  </button>  
 
 
 

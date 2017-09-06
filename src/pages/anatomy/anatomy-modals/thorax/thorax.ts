@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
 
+
+
 @Component({
   selector: 'page-basic-anatomy-thorax',
   templateUrl: 'thorax.html'
@@ -29,13 +31,14 @@ export class ThoraxModal {
 
   }
 
-  title = 'Anatomy of the Thorax';
+  title: string = 'Anatomy of the Thorax';
 
-  intro = "A Honeybee's thorax can be further broken down into 3 main components:<b> the Wings, Legs, and Pollen Baskets. </b>";
+  intro: string = "A Honeybee's thorax can be further broken down into 3 main components:<b> the Wings, Legs, and Pollen Baskets. </b>";
 
   sections = [
 
     {
+      id: 1,
       title:"<b> <u> The Wings </u> </b>",
       image:"assets/images/honeybee_wings.jpg",
       description:`The wings of the Honeybee are arranged in two pairs on the thorax are connected by a row of hooks on the back wing. The
@@ -46,6 +49,7 @@ export class ThoraxModal {
     },
 
     {
+      id: 2,
       title:"<b>  <u> The Legs </u> </b>",
       image:"assets/images/honeybee_legs.jpg",
       description:`The Honeybee has three pairs of six segmented legs, these segments mean the legs are very flexible. The front legs
@@ -57,6 +61,7 @@ export class ThoraxModal {
     },
 
     {
+      id: 3,
       title:"<b> <u> The Pollen Baskets </u> </b>",
       image:"assets/images/honeybee_pollen_basket.jpg",
       description:`The pollen basket is located the bees' hind legs and consists of hairs surrounding a concave region in which the bee
