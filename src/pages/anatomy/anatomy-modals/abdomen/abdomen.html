@@ -1,72 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      <h3> Anatomy of the Abdomen </h3>
-    </ion-title>
-    <ion-buttons start>
-      <button ion-button (click)="dismiss()">
-        <span ion-text color="primary" showWhen="ios">Cancel</span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-  <ion-card>
-
-    <ion-card-content>
-
-        <h1> <br /> A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.
-        </b></h1>
-          <br /> <br />
-    
-          <h1> <b>  <u> The Reproductive Organs </u> </b> </h1> <br />
-    
-          <ion-avatar>
-            <img src="" id="" (click)="enlargePhotograph('')" />
-          </ion-avatar> <br /> <br />
-    
-          <h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-            purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-            tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-            dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-            amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-            nisi, ut commodo purus aliquam eget.
-          </h2> <br /> <br />
-    
-          <h1> <b>  <u> The Wax Glands </u> </b> </h1> <br />
-    
-          <ion-avatar>
-            <img src="" id="" (click)="enlargePhotograph('')" />
-          </ion-avatar> <br /> <br />
-    
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est
-            tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare.
-            Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt
-            massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque
-            ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia.
-            Nam fermentum malesuada nisi, ut commodo purus aliquam eget.
-          </h2> <br /> <br />
-    
-          <h1> <b>  <u> The Proboscis </u> </b> </h1> <br />
-    
-          <ion-avatar>
-            <img src="" id="" (click)="enlargePhotograph('')" />
-          </ion-avatar> <br /> <br />
-    
-    
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-            purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-            tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-            dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-            amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-            nisi, ut commodo purus aliquam eget.
-          </h2><br /> <br />
-
-    </ion-card-content>
-
-  </ion-card>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-title>
+        <h3> {{title}} </h3>
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="primary" showWhen="ios">Cancel</span>
+          <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-card>
+  
+      <ion-card-content>
+        <h1 [innerHTML]='intro'> </h1>
+        <br /> <br />
+      </ion-card-content>
+  
+      <ion-card-content *ngFor="let section of sections">
+  
+        <h1 [innerHTML]='section.title'> </h1> <br />
+  
+        <ion-avatar>
+          <img [src]="section.image" [id]="section.id" (click)="enlargePhotograph(section.id)"/>
+        </ion-avatar> <br /> <br />
+  
+        <h2 [innerHTML]="section.description">
+  
+        </h2> <br /> <br />
+  
+      </ion-card-content>
+  
+  
+    </ion-card>
+  
+    <div id='enlargedImageBackground'>
+  
+    </div>
+  
+  </ion-content>
