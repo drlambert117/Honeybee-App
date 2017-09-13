@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
 
+import { HiveHierarchyPage } from '../hive-hierarchy/hive-hierarchy';
+
 import { HeadModal } from './anatomy-modals/head/head';
 import { ThoraxModal } from './anatomy-modals/thorax/thorax'
 import { AbdomenModal } from './anatomy-modals/abdomen/abdomen';
 
-// import { NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-basic-anatomy',
@@ -13,10 +15,16 @@ import { AbdomenModal } from './anatomy-modals/abdomen/abdomen';
 })
 export class AnatomyPage {
 
-  constructor(public modalCtrl: ModalController) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController) {
 
   }
 
+  goToGenderPage() {
+    console.log("goToGenderPage() function called.");
+
+    this.navCtrl.setRoot(HiveHierarchyPage);
+
+  }
 
   openHeadModal() {
     let headModal = this.modalCtrl.create(HeadModal);

@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <h3> {{title}} </h3>
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="primary" showWhen="ios">Cancel</span>
+          <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <div padding>
+      <ion-segment [(ngModel)]="segment">
+        <ion-segment-button value="Appearance">
+          Appearance
+        </ion-segment-button>
+        <ion-segment-button value="Anatomy">
+          Anatomy
+        </ion-segment-button>
+        <ion-segment-button value="Life Cycle">
+          Life Cycle
+        </ion-segment-button>
+        <ion-segment-button value="Hive Function">
+          Hive Function
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    
+    <div [ngSwitch]="segment">
+      <ion-list *ngSwitchCase="'Appearance'">
+        <ion-item>
+          
+          <h2>Test1</h2>
+
+        </ion-item>
+      </ion-list>
+    
+      <ion-list *ngSwitchCase="'Anatomy'">
+        <ion-item>
+          
+          <h2>Test2</h2>
+
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'Life Cycle'">
+        <ion-item>
+          
+          <h2>Test3</h2>
+
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'Hive Function'">
+        <ion-item>
+          
+          <h2>Test4</h2>
+
+        </ion-item>
+      </ion-list>
+    </div>
+  
+    <div id='enlargedImageBackground'>
+  
+    </div>
+  
+  </ion-content>
