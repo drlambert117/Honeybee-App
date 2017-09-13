@@ -11,8 +11,10 @@ import { FastFactsPage } from '../pages/fast-facts/fast-facts';
 import { AnatomyPage } from '../pages/anatomy/anatomy';
 
 import { HiveHierarchyPage } from '../pages/hive-hierarchy/hive-hierarchy';
-//subpages for GenderPage
+//subpages for HiveHierarchyPage
 import { QueenAboutPage } from '../pages/hive-hierarchy/queen-bee/about/about';
+import { DroneAboutPage } from '../pages/hive-hierarchy/drone-bee/about/about';
+import { WorkerAboutPage } from '../pages/hive-hierarchy/worker-bee/about/about';
 
 
 //Modals
@@ -33,6 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AnatomyPage,
     HiveHierarchyPage,
     QueenAboutPage,
+    DroneAboutPage,
+    WorkerAboutPage,
 
     //Modals
     HeadModal,
@@ -53,6 +57,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AnatomyPage,
     HiveHierarchyPage,
     QueenAboutPage,
+    DroneAboutPage,
+    WorkerAboutPage,
 
     //Modals
     HeadModal,
