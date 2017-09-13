@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
 
-import { GenderPage } from '../gender/gender';
+import { HiveHierarchyPage } from '../hive-hierarchy/hive-hierarchy';
 
 import { HeadModal } from './anatomy-modals/head/head';
 import { ThoraxModal } from './anatomy-modals/thorax/thorax'
@@ -22,7 +22,7 @@ export class AnatomyPage {
   goToGenderPage() {
     console.log("goToGenderPage() function called.");
 
-    this.navCtrl.setRoot(GenderPage);
+    this.navCtrl.setRoot(HiveHierarchyPage);
 
   }
 

@@ -9,20 +9,46 @@
 
 <ion-content padding>
 
+
   <ion-slides pager>
+
+    <ion-slide>
+      <img src="" />
+      <ion-card>
+        <ion-card-header>
+          <h1>{{card_title}}</h1>
+        </ion-card-header>
+        <ion-card-content>
+          <h2>{{description}}</h2>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+
+
     <ion-slide *ngFor="let slide of slides">
       <ion-card>
 
-        <img [src]="slide.image" class="slide-image" />
+        <img [src]="slide.image" />
 
         <ion-card-content>
           <h1 class="slide-title" [innerHTML]="slide.title"></h1>
-          <p [innerHTML]="slide.description"></p>
+          <h2 [innerHTML]="slide.description"></h2> <br />
+          <ion-list inset>
+
+            <!-- <button ion-item (click)='goToPageAppearance()'>
+              Appearance
+            </button> -->
+
+            <button ion-item (click)='goToPageAppearance()'>
+              <h2>Learn More</h2>
+            </button>
+
+          </ion-list>
         </ion-card-content>
-
       </ion-card>
-
     </ion-slide>
+
     <ion-slide>
       <img src="" />
       <h2 class="slide-title">Ready to Continue?</h2>

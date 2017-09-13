@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { HoneybeePage } from '../pages/honeybee/honeybee';
 import { FastFactsPage } from '../pages/fast-facts/fast-facts';
 import { AnatomyPage } from '../pages/anatomy/anatomy';
-import { GenderPage } from '../pages/gender/gender';
+import { HiveHierarchyPage } from '../pages/hive-hierarchy/hive-hierarchy';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +28,7 @@ export class MyApp {
       { title: 'What is a Honeybee?', component: HoneybeePage},
       { title: 'Fast Facts', component: FastFactsPage},
       { title: 'Anatomy of the Honeybee', component: AnatomyPage},
-      { title: 'Gender and Hierarchy', component: GenderPage }
+      { title: 'Hierarchy of the Beehive', component: HiveHierarchyPage }
     ];
 
   }
