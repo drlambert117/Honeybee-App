@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{title}}</ion-title>
+    <ion-title>{{selectedPage?.page_title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,12 +15,11 @@
 
     <ion-card-content>
       <p>
-        {{page_content}}
+        {{selectedPage?.page_content}}
       </p>
     </ion-card-content>
 
   </ion-card> <br />
-
   <button ion-button full large color='secondary' icon-right (click)='goToHoneybeePage()'>  
     Section 1: What is a Honeybee?
     <ion-icon name='arrow-forward'></ion-icon>
