@@ -3,19 +3,19 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{selectedPage?.page_title}}</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngFor='let page of selectedPage'>
 
-    <img [src]="image_name" />
+    <img [src]="page.image_name" />
 
     <ion-card-content>
       <p>
-        {{selectedPage?.page_content}}
+        {{page.page_content}}
       </p>
     </ion-card-content>
 
