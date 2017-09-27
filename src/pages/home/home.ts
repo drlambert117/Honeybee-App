@@ -46,7 +46,7 @@ export class HomePage {
     console.log("data:");
     console.table(this.pages); 
 
-    this.selectedPage = this.pages.filter(p => p.page_id === this.page_id);
+    this.selectedPage = this.pages.filter(p => p.page_id == 1);
     console.log("selectedPage data: ");
     console.table(this.selectedPage);
 }
