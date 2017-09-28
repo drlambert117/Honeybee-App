@@ -11,5 +11,42 @@
     "page_title": "What is a Honeybee?",
     "image_name": "assets/images/honeybee_2.jpg",
     "page_content": "A honey bee (or honeybee) is any member of the genus Apis, primarily distinguished by the production and storage of honey and the construction of perennial, colonial nests from wax. Currently, only seven species of honey bee are recognized, with a total of 44 subspecies, though historically six to eleven species are recognized. The best known honey bee is the Western honey bee which has been domesticated for honey production and crop pollination. Honey bees represent only a small fraction of the roughly 20,000 known species of bees. Some other types of related bees produce and store honey, including the stingless honey bees, but only members of the genus Apis are true honey bees. Feel free to go through this app to learn more about the marvelous honeybee."
+},
+{
+    "page_id": 3,
+    "page_name": "fast-facts-page",
+    "page_title": "Fast Facts",
+    "fast_fact_cards": [
+        {
+            "card_id": 1,
+            "card_content": "Honey bees have 6 legs, 2 compound eyes made up of thousands of tiny lenses (one on each side of the head), 3 simple eyes on the top of the head, 2 pairs of wings, a nectar pouch, and a stomach. (We will explore the anatomy of a honeybee in the next section.)",
+            "image_name": "assets/images/honeybee_fastfacts_1.jpg"
+          },
+      
+          {
+            "card_id": 2,
+            "card_content": "The honey bee's wings stroke incredibly fast, about 200 beats per second, thus making their famous, distinctive buzz.",
+            "image_name": "assets/images/honeybee_fastfacts_2.jpg"
+          },
+      
+          {
+            "card_id": 3,
+            "card_content": "A honey bee can fly for up to six miles, and as fast as 15 miles per hour.",
+            "image_name": "assets/images/honeybee_fastfacts_3.jpg"
+          },
+          
+          {
+            "card_id": 4,
+            "card_content": "A honey bee is the only insect that produces food that humans consume.",
+            "image_name": "assets/images/honeybee_fastfacts_4.jpg"
+      
+          },
+      
+          {
+            "card_id": 5,
+            "card_content": "Honey is the only food that includes all the substances necessary to sustain life, including enzymes, vitamins, minerals, and water; and it's the only food that contains pinocembrin, an antioxidant associated with improved brain functioning.",
+            "image_name": "assets/images/honeybee_fastfacts_5.jpg"
+          }
+    ]
 }
 ]
