@@ -9,13 +9,13 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngFor='let page of selectedPage'>
 
-    <img [src]="image_name" id='honeybee-2' (click) = "enlargePhotograph('honeybee-2')"/> <br />
+    <img [src]="page.image_name" id='honeybee-2' (click) = "enlargePhotograph('honeybee-2')"/> <br />
 
     <ion-card-content>
       <p>
-        {{page_content}}
+        {{page.page_content}}
       </p>
     </ion-card-content>
 

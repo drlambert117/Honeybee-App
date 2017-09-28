@@ -17,10 +17,10 @@ export class DataService{
     getData(): Observable<IPage[]>{
       
 
-      console.log("%c-----------------------","color: green; font-weight: bold");
-      console.log("%cDataService:", "color: green; font-weight: bold");
-      console.log("%c-----------------------","color: green; font-weight: bold");
-      console.log("DataService - getData method called!");
+      console.log("%c-----------------------","color: orange; font-weight: bold");
+      console.log("%cDataService: getData() method called!", "color: orange; font-weight: bold");
+      console.log("%c-----------------------","color: orange; font-weight: bold");
+      
 
       return this.http.get(this.api_url).map((res:Response) => res.json())
           .do(data => console.log("data object returned from http.get call:"))

@@ -24,12 +24,14 @@ export class HomePage {
   }
 
   ngOnInit(){
-    console.log("ngOnInit function called!");
     console.log("%c-----------------------","color: blue; font-weight: bold");
     console.log("%cHome Component", "color: blue; font-weight: bold");
     console.log("%c-----------------------","color: blue; font-weight: bold");
 
-    console.log("ngOnInit function called!");
+    console.log("%c-----------------------","color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------","color: green; font-weight: bold");
+
     
     this.pageDataService.getData().subscribe(data => this.extractData(data));      
             
@@ -37,10 +39,9 @@ export class HomePage {
                 }
 
    extractData(data: any){
-    console.log("%c-----------------------","color: blue; font-weight: bold");
-    console.log("%cHome Component", "color: blue; font-weight: bold");
-    console.log("%c-----------------------","color: blue; font-weight: bold");
-    console.log("extractData function called!");
+    console.log("%c-----------------------","color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------","color: green; font-weight: bold");
 
     this.pages = data;
     console.log("data:");
@@ -52,7 +53,9 @@ export class HomePage {
 }
 
   goToHoneybeePage() {
-    console.log("goToHoneybeePage() function was called.");
+    console.log("%c-----------------------","color: green; font-weight: bold");
+    console.log("%cgoToHoneybeePage() function was called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------","color: green; font-weight: bold");
 
     this.navCtrl.setRoot(HoneybeePage);
 
