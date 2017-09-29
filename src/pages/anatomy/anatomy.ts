@@ -33,24 +33,24 @@ export class AnatomyPage {
 
   openHeadModal() {
     console.log("%c-----------------------", "color: green; font-weight: bold");
-    console.log('%copenHeadModal() function has been called.', "color: green; font-weight: bold");
+    console.log("%copenHeadModal() function has been called.", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
     let headModal = this.modalCtrl.create(HeadModal);
     headModal.present();
   }
 
   openThoraxModal() {
-    console.log("%c-----------------------", "color: blue; font-weight: bold");
-    console.log('%copenThoraxModal() function has been called.');
-    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%copenThoraxModal() function has been called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
     let thoraxModal = this.modalCtrl.create(ThoraxModal);
     thoraxModal.present();
   }
 
   openAbdomenModal() {
-    console.log("%c-----------------------", "color: blue; font-weight: bold");
-    console.log('%copenAbdomenModal() function has been called.');
-    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%copenAbdomenModal() function has been called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
     let abdomenModal = this.modalCtrl.create(AbdomenModal);
     abdomenModal.present();
   }

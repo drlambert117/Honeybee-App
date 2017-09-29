@@ -5,17 +5,28 @@ import { ViewController } from 'ionic-angular';
   selector: 'page-basic-anatomy-abdomen',
   templateUrl: 'abdomen.html'
 })
+
 export class AbdomenModal {
+  title : string = 'Anatomy of the Abdomen';
 
   constructor(public viewCtrl: ViewController) {
 
   }
 
-  dismiss() {
-    this.viewCtrl.dismiss();
+  ngOnInit() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%canatomy: abdomen modal Component", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
   }
 
   enlargePhotograph(id) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cenlargePhotograph() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
 
     if (document.getElementById(id).className == '') {
       document.getElementById(id).className = 'enlargedPhotograph';
@@ -29,7 +40,12 @@ export class AbdomenModal {
 
   }
 
-  title : string = 'Anatomy of the Abdomen';
+  dismiss() {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cdismiss() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    this.viewCtrl.dismiss();
+  }
   
     intro : string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
   
