@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <h3> {{title}} </h3>
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div padding>
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="Appearance">
+        Appearance
+      </ion-segment-button>
+      <ion-segment-button value="Anatomy">
+        Anatomy
+      </ion-segment-button>
+      <ion-segment-button value="Life Cycle">
+        Life Cycle
+      </ion-segment-button>
+      <ion-segment-button value="Function">
+        Function
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="segment">
+    <ion-list *ngSwitchCase="'Appearance'">
+      <h1 style="text-align: center">Appearance</h1> <br />
+      <h3 style="text-align:center">{{appearance_content}}</h3>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Anatomy'">
+      <h1 style="text-align: center ">Anatomy</h1> <br />
+      <h3 style="text-align:center">{{anatomy_content}}</h3>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Life Cycle'">
+      <h1 style="text-align: center ">Life Cycle</h1> <br />
+      <h3 style="text-align:center">{{life_cycle_content}}</h3>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Function'">
+      <h1 style="text-align: center ">Hive Function</h1> <br />
+      <h3 style="text-align:center">{{function_content}}</h3>
+    </ion-list>
+  </div>
+
+  <div id='enlargedImageBackground'>
+
+  </div>
+
+</ion-content>
