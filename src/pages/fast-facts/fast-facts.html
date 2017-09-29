@@ -9,16 +9,16 @@
 
 <ion-content>
 
-    <ion-card *ngFor="let fact_card of fact_cards">
+    <ion-card *ngFor="let fact_card of cards_data">
 
-        <ion-card-title [innerHTML]='fact_card.id'>  </ion-card-title>
+        <ion-card-title [innerHTML]='fact_card.card_id'>  </ion-card-title>
 
         <ion-card-content>
-            <p [innerHTML]='fact_card.content'>
+            <p [innerHTML]='fact_card.card_content'>
                 
             </p> <br />
             <ion-avatar>
-                <img [src]="fact_card.image_name" [id]="fact_card.id" (click)="enlargePhotograph(fact_card.id)"/>
+                <img [src]="fact_card.image_name" [id]="fact_card.card_id" (click)="enlargePhotograph(fact_card.card_id)"/>
             </ion-avatar>
 
         </ion-card-content> 

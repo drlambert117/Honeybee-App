@@ -11,7 +11,9 @@ import { IPage } from '../../services/page';
   selector: 'page-fast-facts',
   templateUrl: 'fast-facts.html'
 })
+
 export class FastFactsPage {
+  title: string = "Fast Facts";
   pages: IPage[];
   page_data: IPage[];
   selectedPage: IPage[];
@@ -22,7 +24,7 @@ export class FastFactsPage {
 
   ngOnInit() {
     console.log("%c-----------------------", "color: blue; font-weight: bold");
-    console.log("%cHoneyBee Component", "color: blue; font-weight: bold");
+    console.log("%cfast-facts Component", "color: blue; font-weight: bold");
     console.log("%c-----------------------", "color: blue; font-weight: bold");
 
     console.log("%c-----------------------", "color: green; font-weight: bold");
@@ -30,8 +32,6 @@ export class FastFactsPage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.pageDataService.getData().subscribe(data => this.extractData(data));
-
-
   }
 
   extractData(data: any) {
@@ -47,12 +47,16 @@ export class FastFactsPage {
     console.log("selectedPage data: ");
     console.table(this.selectedPage);
 
-    // this.cards_data = this.selectedPage[3];
-    // console.log("card_data:");
-    // console.dir(this.cards_data);
+    this.cards_data = this.selectedPage[0].fast_fact_cards;
+    console.log("cards_data: ")
+    console.log(this.cards_data);
   }
 
 enlargePhotograph(id) {
+
+  console.log("%c-----------------------", "color: green; font-weight: bold");
+  console.log("%cenlargePhotograph() function called!", "color: green; font-weight: bold");
+  console.log("%c-----------------------", "color: green; font-weight: bold");
 
     if (document.getElementById(id).className == ''  ) {
         document.getElementById(id).className ='enlargedPhotograph';
@@ -63,17 +67,15 @@ enlargePhotograph(id) {
         document.getElementById(id).className ='';
         document.getElementById("enlargedImageBackground").className ='';
     }
-
   }
 
   goToAnatomyPage() {
-    console.log("goToAnatomyPage() function called.");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cgoToAnatomyPage() function called.","color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.navCtrl.setRoot(AnatomyPage);
-
   }
-
-  title: string = "Fast Facts";
 
   fact_cards = [
     {
@@ -111,5 +113,4 @@ enlargePhotograph(id) {
       image_name: 'assets/images/honeybee_fastfacts_5.jpg'
     }
   ]
-
 }
