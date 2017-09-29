@@ -49,11 +49,10 @@ export class FastFactsPage {
 
     this.cards_data = this.selectedPage[0].fast_fact_cards;
     console.log("cards_data: ")
-    console.log(this.cards_data);
+    console.table(this.cards_data);
   }
 
 enlargePhotograph(id) {
-
   console.log("%c-----------------------", "color: green; font-weight: bold");
   console.log("%cenlargePhotograph() function called!", "color: green; font-weight: bold");
   console.log("%c-----------------------", "color: green; font-weight: bold");
