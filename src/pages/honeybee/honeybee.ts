@@ -11,6 +11,7 @@ import { IPage } from '../../services/page';
   templateUrl: 'honeybee.html',
   providers: [DataService]
 })
+
 export class HoneybeePage {
   title: string = 'What is a Honeybee?';
   pages: IPage[];
@@ -31,8 +32,6 @@ export class HoneybeePage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.pageDataService.getData().subscribe(data => this.extractData(data));
-
-
   }
 
   extractData(data: any) {
@@ -51,6 +50,10 @@ export class HoneybeePage {
 
   enlargePhotograph(id) {
 
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cenlargePhotograph() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
     if (document.getElementById(id).className == '') {
       document.getElementById(id).className = 'enlargedPhotograph';
       document.getElementById("enlargedImageBackground").className = 'enlarged';
@@ -60,7 +63,6 @@ export class HoneybeePage {
       document.getElementById(id).className = '';
       document.getElementById("enlargedImageBackground").className = '';
     }
-
   }
 
   goToFastFactsPage() {
@@ -69,6 +71,5 @@ export class HoneybeePage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.navCtrl.setRoot(FastFactsPage);
-
   }
 }

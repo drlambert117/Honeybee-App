@@ -13,23 +13,35 @@ import { NavController } from 'ionic-angular';
   selector: 'page-basic-anatomy',
   templateUrl: 'anatomy.html'
 })
-export class AnatomyPage {
 
+export class AnatomyPage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) {
 
   }
 
+  ngOnInit() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%canatomy Component", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+  }
+
   goToGenderPage() {
-    console.log("goToGenderPage() function called.");
-
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%cgoToGenderPage() function called.", "color:green; font-weight:bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
     this.navCtrl.setRoot(HiveHierarchyPage);
-
   }
 
   openHeadModal() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log('%copenHeadModal() function has been called.');
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
     let headModal = this.modalCtrl.create(HeadModal);
     headModal.present();
-    console.log('openHeadModal() function has been called.');
   }
 
   openThoraxModal() {

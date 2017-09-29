@@ -11,6 +11,7 @@ import { IPage } from '../../services/page';
   templateUrl: 'home.html',
   providers: [DataService]
 })
+
 export class HomePage {
   title: string = "The Helpful Honeybee";
   pages: IPage[];
@@ -30,10 +31,7 @@ export class HomePage {
     console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
-
     this.pageDataService.getData().subscribe(data => this.extractData(data));
-
-
   }
 
   extractData(data: any) {
@@ -56,7 +54,5 @@ export class HomePage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.navCtrl.setRoot(HoneybeePage);
-
   }
-
 }
