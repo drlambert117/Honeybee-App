@@ -9,18 +9,17 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngFor='let page of selectedPage'>
 
-    <img [src]="image_name" />
+    <img [src]="page.image_name" />
 
     <ion-card-content>
       <p>
-        {{page_content}}
+        {{page.page_content}}
       </p>
     </ion-card-content>
 
   </ion-card> <br />
-
   <button ion-button full large color='secondary' icon-right (click)='goToHoneybeePage()'>  
     Section 1: What is a Honeybee?
     <ion-icon name='arrow-forward'></ion-icon>

@@ -5,12 +5,6 @@ import { QueenAboutPage } from './queen-bee/about/about';
 import { DroneAboutPage } from './drone-bee/about/about';
 import { WorkerAboutPage } from './worker-bee/about/about';
 
-/**
- * Generated class for the GenderPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @Component({
   selector: 'page-hive-hierarchy',
   templateUrl: 'hive-hierarchy.html',
@@ -51,12 +45,14 @@ export class HiveHierarchyPage {
       image: "assets/images/honeybee_1.png",
       page: QueenAboutPage
     },
+    
     {
       title: "<b>The Female Worker Bee</b>",
       description: "Fierce protectors, gathering nectar.",
       image: "assets/images/honeybee_1.png",
       page: WorkerAboutPage
     },
+
     {
       title: "<b>The Male Drone Bee</b>",
       description: "Short lived, and uninterested,",

@@ -3,32 +3,56 @@ import { NavController } from 'ionic-angular';
 
 import { HoneybeePage } from '../honeybee/honeybee';
 
-
+import { DataService } from '../../services';
+import { IPage } from '../../services/page';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [DataService]
 })
+
 export class HomePage {
+  title: string = "The Helpful Honeybee";
+  pages: IPage[];
+  page_data: IPage[];
+  selectedPage: IPage[];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public pageDataService: DataService) {
 
+  }
+
+  ngOnInit() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%cHome Component", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pageDataService.getData().subscribe(data => this.extractData(data));
+  }
+
+  extractData(data: any) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pages = data;
+    console.log("data:");
+    console.table(this.pages);
+
+    this.selectedPage = this.pages.filter(p => p.page_id == 1);
+    console.log("selectedPage data: ");
+    console.table(this.selectedPage);
   }
 
   goToHoneybeePage() {
-    console.log("goToHoneybeePage() function was called.");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cgoToHoneybeePage() function was called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.navCtrl.setRoot(HoneybeePage);
-
   }
-
-  title: string = "The Helpful Honeybee";
-
-  image_name: string = "assets/images/honeybee_1.png";
-  
-  page_content: string = `The purpose of this app is to educate about the wonders of the Honeybee and it's vital role in the natural world. Feel free
-  to follow the app in order or select a specific section from the menu to the left.`;
-
-
-
 }

@@ -13,38 +13,54 @@ import { NavController } from 'ionic-angular';
   selector: 'page-basic-anatomy',
   templateUrl: 'anatomy.html'
 })
+
 export class AnatomyPage {
+  title: string = "Anatomy";
 
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) {
 
   }
 
-  goToGenderPage() {
-    console.log("goToGenderPage() function called.");
+  ngOnInit() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%canatomy Component", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
 
-    this.navCtrl.setRoot(HiveHierarchyPage);
-
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
   }
 
   openHeadModal() {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%copenHeadModal() function has been called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
     let headModal = this.modalCtrl.create(HeadModal);
     headModal.present();
-    console.log('openHeadModal() function has been called.');
   }
 
   openThoraxModal() {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%copenThoraxModal() function has been called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
     let thoraxModal = this.modalCtrl.create(ThoraxModal);
     thoraxModal.present();
-    console.log('openThoraxModal() function has been called.');
   }
 
   openAbdomenModal() {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%copenAbdomenModal() function has been called.", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
     let abdomenModal = this.modalCtrl.create(AbdomenModal);
     abdomenModal.present();
-    console.log('openAbdomenModal() function has been called.');
   }
 
-  title: string = "Anatomy";
+  goToGenderPage() {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cgoToGenderPage() function called.", "color:green; font-weight:bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    this.navCtrl.setRoot(HiveHierarchyPage);
+  }
 
   image_name: string = "assets/images/honeybee_basic_anatomy.jpg";
 
