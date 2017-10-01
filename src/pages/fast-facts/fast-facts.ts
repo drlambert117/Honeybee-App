@@ -5,7 +5,7 @@ import { AnatomyPage } from '../anatomy/anatomy';
 
 import { DataService } from '../../services/data.service';
 import { IPage } from '../../services/page';
-// import { ICard } from '../../services/card'
+
 
 @Component({
   selector: 'page-fast-facts',
