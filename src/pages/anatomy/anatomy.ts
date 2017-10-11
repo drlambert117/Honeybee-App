@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { HiveHierarchyPage } from '../hive-hierarchy/hive-hierarchy';
 
@@ -7,17 +8,24 @@ import { HeadModal } from './anatomy-modals/head/head';
 import { ThoraxModal } from './anatomy-modals/thorax/thorax'
 import { AbdomenModal } from './anatomy-modals/abdomen/abdomen';
 
-import { NavController } from 'ionic-angular';
+import { DataService } from '../../services/data.service';
+import { IPage } from '../../services/page';
 
 @Component({
   selector: 'page-basic-anatomy',
-  templateUrl: 'anatomy.html'
+  templateUrl: 'anatomy.html',
 })
 
 export class AnatomyPage {
   title: string = "Anatomy";
-
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) {
+  pages: IPage[];
+  page_data: IPage[];
+  selectedPage: IPage[];
+  abdomen_Data: any[];
+  abdomen_Sections: any[];
+  head_Data: any[];
+  thorax_Data: any[];
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public pageDataService: DataService) {
 
   }
 
@@ -29,6 +37,34 @@ export class AnatomyPage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pageDataService.getData().subscribe(data => this.extractData(data));
+  }
+
+  extractData(data: any) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pages = data;
+    console.log("data:");
+    console.table(this.pages);
+
+    this.selectedPage = this.pages.filter(p => p.page_id == 4);
+    console.log("selectedPage data: ");
+    console.table(this.selectedPage);
+
+    this.abdomen_Data = this.selectedPage[0].anatomy_modals[0];
+    console.log("abdomen_Data: ");
+    console.table(this.abdomen_Data);
+
+    this.head_Data = this.selectedPage[0].anatomy_modals[1];
+    console.log("head_Data: ");
+    console.table(this.head_Data);
+
+    this.thorax_Data = this.selectedPage[0].anatomy_modals[2];
+    console.log("thorax_Data: ");
+    console.table(this.thorax_Data);
   }
 
   openHeadModal() {
@@ -61,10 +97,5 @@ export class AnatomyPage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     this.navCtrl.setRoot(HiveHierarchyPage);
   }
-
-  image_name: string = "assets/images/honeybee_basic_anatomy.jpg";
-
-  page_content: string = `The honeybee, though small in size, is an extremely complex creature. Like most insects, the honeybee's body is divided
-  into three parts: the head, thorax, and abdomen. Tap each anatomical part to learn more.`;
 
 }

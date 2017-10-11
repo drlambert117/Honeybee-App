@@ -9,10 +9,10 @@
 
 <ion-content padding>
 
-  <ion-card>
-    <img [src]="image_name"/>
+  <ion-card *ngFor='let page of selectedPage'>
+    <img [src]="page.image_name"/>
     <ion-card-content>
-      <p>{{page_content}}</p>
+      <p>{{page.page_content}}</p>
     </ion-card-content> <br />
 
     <button ion-button full large color='dark' id="btn-head" (click)='openHeadModal()'>
@@ -33,8 +33,6 @@
     Next Page
     <ion-icon name='arrow-forward'></ion-icon>
   </button>  
-
-
 
 </ion-content>
 

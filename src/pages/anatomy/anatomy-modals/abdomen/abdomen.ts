@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
 
+import { DataService } from '../../../../services/data.service';
+import { IPage } from '../../../../services/page';
+
 @Component({
   selector: 'page-basic-anatomy-abdomen',
   templateUrl: 'abdomen.html'
@@ -8,8 +11,13 @@ import { ViewController } from 'ionic-angular';
 
 export class AbdomenModal {
   title : string = 'Anatomy of the Abdomen';
+  pages: IPage[];
+  page_data: IPage[];
+  selectedPage: IPage[];
+  modal_Data: any[];
+  modal_Sections: any[];
 
-  constructor(public viewCtrl: ViewController) {
+  constructor(public viewCtrl: ViewController, public pageDataService: DataService) {
 
   }
 
@@ -21,6 +29,30 @@ export class AbdomenModal {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pageDataService.getData().subscribe(data => this.extractData(data));
+  }
+
+  extractData(data: any) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pages = data;
+    console.log("data:");
+    console.table(this.pages);
+
+    this.selectedPage = this.pages.filter(p => p.page_id == 4);
+    console.log("selectedPage data: ");
+    console.table(this.selectedPage);
+
+    this.modal_Data = this.selectedPage[0].anatomy_modals[0];
+    console.log("modal_Data: ");
+    console.table(this.modal_Data);
+
+    this.modal_Sections = this.selectedPage[0].anatomy_modals[0].modal_sections;
+    console.log("modal_Sections: ");
+    console.table(this.modal_Sections);
   }
 
   enlargePhotograph(id) {

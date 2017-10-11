@@ -14,22 +14,22 @@
   
   <ion-content>
   
-    <ion-card>
+    <ion-card *ngFor="let modal of modal_Data">
   
       <ion-card-content>
-        <h1 [innerHTML]='intro'> </h1>
+        <h1 [innerHTML]='modal.modal_intro'> </h1>
         <br /> <br />
       </ion-card-content>
   
-      <ion-card-content *ngFor="let section of sections">
+      <ion-card-content *ngFor="let section of modal_Sections">
   
-        <h1 [innerHTML]='section.title'> </h1> <br />
+        <h1 [innerHTML]='section.section_title'> </h1> <br />
   
         <ion-avatar>
-          <img [src]="section.image" [id]="section.id" (click)="enlargePhotograph(section.id)"/>
+          <img [src]="section.section_image" [id]="section.section_id" (click)="enlargePhotograph(section.section_id)"/>
         </ion-avatar> <br /> <br />
   
-        <h2 [innerHTML]="section.description">
+        <h2 [innerHTML]="section.section_description">
   
         </h2> <br /> <br />
   

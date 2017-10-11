@@ -9,7 +9,7 @@ import { IPage } from '../../services/page';
 
 @Component({
   selector: 'page-fast-facts',
-  templateUrl: 'fast-facts.html'
+  templateUrl: 'fast-facts.html',
 })
 
 export class FastFactsPage {
@@ -17,7 +17,7 @@ export class FastFactsPage {
   pages: IPage[];
   page_data: IPage[];
   selectedPage: IPage[];
-  cards_data;
+  cards_data: any[];
   constructor(public navCtrl: NavController, public pageDataService: DataService) {
 
   }
