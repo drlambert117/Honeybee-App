@@ -14,10 +14,10 @@
 
 <ion-content>
 
-  <ion-card *ngFor="let modal of modal_Data">
+  <ion-card>
 
     <ion-card-content>
-      <p [innerHTML]='modal.modal_intro'> </p>
+      <h2 [innerHTML]="modal_Intro">  </h2>
       <br />
       <br />
     </ion-card-content>
@@ -33,9 +33,9 @@
       <br />
       <br />
 
-      <h2 [innerHTML]="section.section_description">
+      <p [innerHTML]="section.section_description">
 
-      </h2>
+      </p>
       <br />
       <br />
 

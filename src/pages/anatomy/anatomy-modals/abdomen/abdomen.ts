@@ -15,6 +15,7 @@ export class AbdomenModal {
   page_data: IPage[];
   selectedPage: IPage[];
   modal_Data: any[];
+  modal_Intro: string;
   modal_Sections: any[];
 
   constructor(public viewCtrl: ViewController, public pageDataService: DataService) {
@@ -50,6 +51,9 @@ export class AbdomenModal {
     console.log("modal_Data: ");
     console.table(this.modal_Data);
 
+    this.modal_Intro = this.selectedPage[0].anatomy_modals[0].modal_intro;
+    console.log(this.modal_Intro);
+
     this.modal_Sections = this.selectedPage[0].anatomy_modals[0].modal_sections;
     console.log("modal_Sections: ");
     console.table(this.modal_Sections);
@@ -81,45 +85,4 @@ export class AbdomenModal {
   
     intro : string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
   
-    sections = [
-  
-      {
-        id: 1,
-        title:"<b> <u> The Reproductive Organs </u> </b>",
-        image:"",
-        description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-        purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-        tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-        dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-        amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-        nisi, ut commodo purus aliquam eget.`,
-      },
-  
-      {
-        id: 2,
-        title:"<b> <u> The Wax Glands </u> </b>",
-        image:"",
-        description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-        purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-        tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-        dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-        amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-        nisi, ut commodo purus aliquam eget.`,
-      },
-  
-      {
-        id: 3,
-        title:"<b> <u> The Stinger </u> </b>",
-        image:"",
-        description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-        purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-        tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-        dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-        amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-        nisi, ut commodo purus aliquam eget.​`,
-      },
-      
-    ];
-    
-
 }

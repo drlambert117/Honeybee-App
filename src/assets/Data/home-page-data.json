@@ -59,25 +59,25 @@
     {
       "modal_id": 1,
       "modal_title": "Anatomy of the Abdomen",
-      "modal_intro": "A Honeybee's head can be further broken down into 5 main components:<b> the Antennae, Eyes (Compound and Simple), Proboscis, Mandibles, and the Inner Head.</b>",
+      "modal_intro": "A Honeybee's abdomen can be further broken down into 3 main components:<strong> the Reproductive Organs, Wax Glands, and the Stinger.</strong>",
       "modal_sections": [
         {
           "section_id": 1,
-          "section_title": "<b> <u> The Reproductive Organs </u> </b>",
+          "section_title": "<strong> <u> The Reproductive Organs </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget."
         },
     
         {
           "section_id": 2,
-          "section_title": "<b> <u> The Wax Glands </u> </b>",
+          "section_title": "<strong> <u> The Wax Glands </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget."
         },
     
         {
           "section_id": 3,
-          "section_title": "<b> <u> The Stinger </u> </b>",
+          "section_title": "<strong> <u> The Stinger </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget.​"
         }
@@ -86,39 +86,39 @@
     {
       "modal_id": 2,
       "modal_title": "Anatomy of the Head",
-      "modal_intro": "A Honeybee's head can be further broken down into 5 main components:<b> the Antennae, Eyes (Compound and Simple), Proboscis, Mandibles, and the Inner Head.</b>",
+      "modal_intro": "A Honeybee's head can be further broken down into 3 main components:<strong> the Antennae, Eyes (Compound and Simple), Proboscis, Mandibles, and the Inner Head.<b />",
       "modal_sections": [
         {
           "section_id": 1,
-          "section_title": "<b> <u> The Antennae </u> </b>",
+          "section_title": "<strong> <u> The Antennae </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget."
         },
     
         {
           "section_id": 2,
-          "section_title": "<b> <u> The Eyes </u> </b>",
+          "section_title": "<strong> <u> The Eyes </u> </strong>",
           "section_image": "",
-          "section_description": "<b>Compound Eyes</b> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget. <br /> <br /> <b>Simple Eyes</b> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget"
+          "section_description": "<strong>Compound Eyes</strong> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget. <br /> <br /> <strong>Simple Eyes</strong> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget"
         },
     
         {
           "section_id": 3,
-          "section_title": "<b> <u> The Proboscis </u> </b>",
+          "section_title": "<strong> <u> The Proboscis </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget.​"
         },
 
         {
           "sedtion_id": 4,
-          "section_title": "<b> <u> The Mandibles </u> </b>",
+          "section_title": "<strong> <u> The Mandibles </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget.​"
         },
 
         {
           "sedtion_id": 5,
-          "section_title": "<b> <u> The Inner Head </u> </b>",
+          "section_title": "<strong> <u> The Inner Head </u> </strong>",
           "section_image": "",
           "section_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada nisi, ut commodo purus aliquam eget.​"
         }
@@ -127,25 +127,25 @@
     {
       "modal_id": 3,
       "modal_title": "Anatomy of the Thorax",
-      "modal_intro": "A Honeybee's thorax can be further broken down into 3 main components:<b> the Wings, Legs, and Pollen Baskets. </b>",
+      "modal_intro": "A Honeybee's thorax can be further broken down into 3 main components:<strong> the Wings, Legs, and Pollen Baskets. </strong>",
       "modal_sections": [
         {
           "section_id": 1,
-          "section_title": "<b> <u> The Wings </u> </b>",
+          "section_title": "<strong> <u> The Wings </u> </strong>",
           "section_image": "assets/images/honeybee_wings.jpg",
           "section_description": "The wings of the Honeybee are arranged in two pairs on the thorax are connected by a row of hooks on the back wing. The fore wings are substantially bigger than the hind wings but they both aid in flight. <br /> <br /> The bee is able to lift off by giving a propeller like twist to each wing during the up and down strokes. Pulsating muscles located in the thorax allow the bee to travel at 15 miles per hour and maintain a range up to three miles from the hive, expanding their area of pollination."
         },
     
         {
           "section_id": 2,
-          "section_title": "<b>  <u> The Legs </u> </b>",
+          "section_title": "<strong>  <u> The Legs </u> </strong>",
           "section_image": "assets/images/honeybee_legs.jpg",
-          "section_description": "The Honeybee has three pairs of six segmented legs, these segments mean the legs are very flexible. The front legs are specially designed to clean the antennae, the middle set aid in collecting pollen, and the rear set have a special secion devoted to pollen collection called a <b>Pollen Basket</b> (See next section). Each leg has claws for gripping and sticky pads that assist the bee in landing on slick surfaces. Bees also have taste receptors on the tips of their legs. <br /> <br /> The worker bee has a different set of back legs than the other bees in the hive, containing special combs and a pollen press. These are used by to brush, collect, pack, and carry pollen and propolis back to the hive."
+          "section_description": "The Honeybee has three pairs of six segmented legs, these segments mean the legs are very flexible. The front legs are specially designed to clean the antennae, the middle set aid in collecting pollen, and the rear set have a special secion devoted to pollen collection called a <strong>Pollen Basket</strong> (See next section). Each leg has claws for gripping and sticky pads that assist the bee in landing on slick surfaces. Bees also have taste receptors on the tips of their legs. <br /> <br /> The worker bee has a different set of back legs than the other bees in the hive, containing special combs and a pollen press. These are used by to brush, collect, pack, and carry pollen and propolis back to the hive."
         },
     
         {
           "section_id": 3,
-          "section_title": "<b> <u> The Pollen Baskets </u> </b>",
+          "section_title": "<strong> <u> The Pollen Baskets </u> </strong>",
           "section_image": "assets/images/honeybee_pollen_basket.jpg",
           "section_description": "The pollen basket is located the bees' hind legs and consists of hairs surrounding a concave region in which the bee stores pollen to take back to the hive. When a bee visits a flower, she grooms herself and brushes the pollen sticking to her hairy body towards her hind legs. It is at this point that the middle pair of legs packs the pollen into the basket. <br /> <br /> To help keep the pollen together during flight, some nectar is mixed in. Finally, the hairs on the pollen basket hold it all in place.​"
         }
