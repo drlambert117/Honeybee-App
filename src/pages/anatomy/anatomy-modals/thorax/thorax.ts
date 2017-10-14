@@ -24,7 +24,7 @@ export class ThoraxModal {
 
   ngOnInit() {
     console.log("%c-----------------------", "color: blue; font-weight: bold");
-    console.log("%canatomy: head modal Component", "color: blue; font-weight: bold");
+    console.log("%canatomy: thorax modal Component", "color: blue; font-weight: bold");
     console.log("%c-----------------------", "color: blue; font-weight: bold");
 
     console.log("%c-----------------------", "color: green; font-weight: bold");

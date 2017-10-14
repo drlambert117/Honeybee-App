@@ -15,27 +15,33 @@
 <ion-content>
 
   <ion-card>
+
     <ion-card-content>
-      <h2 [innerHTML]='intro'> </h2>
+      <h2 [innerHTML]="modal_Intro">  </h2>
+      <br />
       <br />
     </ion-card-content>
-  </ion-card>
 
-  <ion-card *ngFor="let section of sections">
-    <ion-card-content>
-      <h1 [innerHTML]='section.title'> </h1>
+    <ion-card-content *ngFor="let section of modal_Sections">
+
+      <h1 [innerHTML]='section.section_title'> </h1>
       <br />
 
       <ion-avatar>
-        <img [src]="section.image" [id]="section.id" (click)="enlargePhotograph(section.id)" />
+        <img [src]="section.section_image" [id]="section.section_id" (click)="enlargePhotograph(section.section_id)" />
       </ion-avatar>
       <br />
       <br />
 
-      <p [innerHTML]="section.description"> </p>
+      <p [innerHTML]="section.section_description">
+
+      </p>
       <br />
       <br />
+
     </ion-card-content>
+
+
   </ion-card>
 
   <div id='enlargedImageBackground'>
