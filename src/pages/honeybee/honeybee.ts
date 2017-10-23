@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 
 //Pages
 import { FastFactsPage } from '../fast-facts/fast-facts';
@@ -20,7 +20,7 @@ export class HoneybeePage {
   page_data: IPage[];
   selectedPage: IPage[];
 
-  constructor(public navCtrl: NavController, public pageDataService: DataService) {
+  constructor(public navCtrl: NavController, public pageDataService: DataService, public loadingCtrl: LoadingController) {
 
   }
 
@@ -40,6 +40,13 @@ export class HoneybeePage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cextractData() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000,
+      dismissOnPageChange: true
+    });
+    loader.present();
 
     this.pages = data;
     console.log("data:");

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalController } from 'ionic-angular';
-import { NavController } from 'ionic-angular';
+import { ModalController, NavController, LoadingController } from 'ionic-angular';
 
 //Pages
 import { HiveHierarchyPage } from '../hive-hierarchy/hive-hierarchy';
@@ -28,7 +27,7 @@ export class AnatomyPage {
   head_Data: any[];
   thorax_Data: any[];
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public pageDataService: DataService) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public pageDataService: DataService, public loadingCtrl: LoadingController) {
 
   }
 
@@ -48,6 +47,13 @@ export class AnatomyPage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cextractData() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000,
+      dismissOnPageChange: true
+    });
+    loader.present();
 
     this.pages = data;
     console.log("data:");
