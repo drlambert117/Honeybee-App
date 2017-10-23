@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+//Pages
 import { HoneybeePage } from '../honeybee/honeybee';
 
+//Services
 import { DataService } from '../../services';
 import { IPage } from '../../services/page';
 

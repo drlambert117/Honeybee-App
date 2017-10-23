@@ -11,7 +11,8 @@
 
   <ion-card *ngFor='let page of selectedPage'>
 
-    <img [src]="page.image_name" id='honeybee-2' (click) = "enlargePhotograph('honeybee-2')"/> <br />
+    <img [src]="page.image_name" id='honeybee-2' (click)="enlargePhotograph('honeybee-2')" />
+    <br />
 
     <ion-card-content>
       <p>
@@ -19,15 +20,16 @@
       </p>
     </ion-card-content>
 
-  </ion-card> <br />
+  </ion-card>
+  <br />
 
   <button ion-button full large color='secondary' icon-right (click)='goToFastFactsPage()'>
-  Next Section: Fast Facts
-  <ion-icon name='arrow-forward'></ion-icon>
-</button>
+    Next Section: Fast Facts
+    <ion-icon name='arrow-forward'></ion-icon>
+  </button>
 
-<div id='enlargedImageBackground'>
+  <div id='enlargedImageBackground'>
 
-      </div>
+  </div>
 
 </ion-content>

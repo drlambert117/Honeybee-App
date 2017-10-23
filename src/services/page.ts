@@ -4,5 +4,7 @@ export interface IPage {
     page_title : string,
     image_name : string,
     page_content: string,
-    fast_fact_cards: any
+    fast_fact_cards: any,
+    anatomy_modals: any,
+    modal_sections: any
 }

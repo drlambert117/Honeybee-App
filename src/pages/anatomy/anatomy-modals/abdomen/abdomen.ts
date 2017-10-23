@@ -1,15 +1,25 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
 
+//Services
+import { DataService } from '../../../../services/data.service';
+import { IPage } from '../../../../services/page';
+
 @Component({
   selector: 'page-basic-anatomy-abdomen',
   templateUrl: 'abdomen.html'
 })
 
 export class AbdomenModal {
-  title : string = 'Anatomy of the Abdomen';
+  title: string = 'Anatomy of the Abdomen';
+  pages: IPage[];
+  page_data: IPage[];
+  selectedPage: IPage[];
+  modal_Data: any[];
+  modal_Intro: string;
+  modal_Sections: any[];
 
-  constructor(public viewCtrl: ViewController) {
+  constructor(public viewCtrl: ViewController, public pageDataService: DataService) {
 
   }
 
@@ -21,6 +31,33 @@ export class AbdomenModal {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pageDataService.getData().subscribe(data => this.extractData(data));
+  }
+
+  extractData(data: any) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pages = data;
+    console.log("data:");
+    console.table(this.pages);
+
+    this.selectedPage = this.pages.filter(p => p.page_id == 4);
+    console.log("selectedPage data: ");
+    console.table(this.selectedPage);
+
+    this.modal_Data = this.selectedPage[0].anatomy_modals[0];
+    console.log("modal_Data: ");
+    console.table(this.modal_Data);
+
+    this.modal_Intro = this.selectedPage[0].anatomy_modals[0].modal_intro;
+    console.log(this.modal_Intro);
+
+    this.modal_Sections = this.selectedPage[0].anatomy_modals[0].modal_sections;
+    console.log("modal_Sections: ");
+    console.table(this.modal_Sections);
   }
 
   enlargePhotograph(id) {
@@ -46,48 +83,7 @@ export class AbdomenModal {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     this.viewCtrl.dismiss();
   }
-  
-    intro : string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
-  
-    sections = [
-  
-      {
-        id: 1,
-        title:"<b> <u> The Reproductive Organs </u> </b>",
-        image:"",
-        description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-        purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-        tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-        dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-        amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-        nisi, ut commodo purus aliquam eget.`,
-      },
-  
-      {
-        id: 2,
-        title:"<b> <u> The Wax Glands </u> </b>",
-        image:"",
-        description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-        purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-        tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-        dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-        amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-        nisi, ut commodo purus aliquam eget.`,
-      },
-  
-      {
-        id: 3,
-        title:"<b> <u> The Stinger </u> </b>",
-        image:"",
-        description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla diam non est tristique mollis. Nam elit
-        purus, vestibulum vel varius eu, eleifend vel nulla. Vivamus malesuada dapibus ornare. Curabitur semper sit amet
-        tortor a dictum. Suspendisse euismod sollicitudin nulla a eleifend. Maecenas ut tincidunt massa. Nullam pharetra
-        dolor sed laoreet tincidunt. Nunc ornare felis a quam sodales porttitor. Suspendisse scelerisque ante mauris, sit
-        amet fermentum nunc laoreet eu. Nunc quis lacus ligula. Donec tempus lorem ac faucibus lacinia. Nam fermentum malesuada
-        nisi, ut commodo purus aliquam eget.​`,
-      },
-      
-    ];
-    
+
+  intro: string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
 
 }

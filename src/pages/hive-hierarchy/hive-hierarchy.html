@@ -13,9 +13,9 @@
   <ion-slides pager>
 
     <ion-slide>
-<img [src]="intro_image" />
+      <img [src]="intro_image" />
       <ion-card>
-        
+
         <ion-card-header>
           <h1>{{intro_title}}</h1>
         </ion-card-header>
@@ -29,15 +29,16 @@
 
     <ion-slide *ngFor="let slide of slides">
 
-        <img [src]="slide.image" />
+      <img [src]="slide.image" />
 
       <ion-card>
 
-        
+
 
         <ion-card-content>
           <h1 class="slide-title" [innerHTML]="slide.title"></h1>
-          <h2 [innerHTML]="slide.description"></h2> <br />
+          <h2 [innerHTML]="slide.description"></h2>
+          <br />
           <ion-list inset>
 
             <button ion-item color='secondary' (click)='goToPage(slide.page)'>
