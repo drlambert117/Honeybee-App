@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 
 import { AnatomyPage } from '../anatomy/anatomy';
 
@@ -18,7 +18,7 @@ export class FastFactsPage {
   page_data: IPage[];
   selectedPage: IPage[];
   cards_data: any[];
-  constructor(public navCtrl: NavController, public pageDataService: DataService) {
+  constructor(public navCtrl: NavController, public pageDataService: DataService, public loadingCtrl: LoadingController) {
 
   }
 
@@ -38,6 +38,13 @@ export class FastFactsPage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cextractData() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000,
+      dismissOnPageChange: true
+    });
+    loader.present();
 
     this.pages = data;
     console.log("data:");
@@ -74,5 +81,13 @@ export class FastFactsPage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
     this.navCtrl.setRoot(AnatomyPage);
+  }
+
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    loader.present();
   }
 }
