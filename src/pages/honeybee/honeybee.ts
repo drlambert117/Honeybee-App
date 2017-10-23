@@ -33,6 +33,13 @@ export class HoneybeePage {
     console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
 
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000,
+      dismissOnPageChange: true
+    });
+    loader.present();
+
     this.pageDataService.getData().subscribe(data => this.extractData(data));
   }
 
@@ -40,13 +47,6 @@ export class HoneybeePage {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     console.log("%cextractData() function called!", "color: green; font-weight: bold");
     console.log("%c-----------------------", "color: green; font-weight: bold");
-
-    let loader = this.loadingCtrl.create({
-      content: "Please wait...",
-      duration: 3000,
-      dismissOnPageChange: true
-    });
-    loader.present();
 
     this.pages = data;
     console.log("data:");
