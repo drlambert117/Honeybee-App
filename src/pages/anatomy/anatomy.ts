@@ -2,12 +2,15 @@ import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 
+//Pages
 import { HiveHierarchyPage } from '../hive-hierarchy/hive-hierarchy';
 
+//Modals
 import { HeadModal } from './anatomy-modals/head/head';
 import { ThoraxModal } from './anatomy-modals/thorax/thorax'
 import { AbdomenModal } from './anatomy-modals/abdomen/abdomen';
 
+//Services
 import { DataService } from '../../services/data.service';
 import { IPage } from '../../services/page';
 
@@ -22,9 +25,9 @@ export class AnatomyPage {
   page_data: IPage[];
   selectedPage: IPage[];
   abdomen_Data: any[];
-  abdomen_Sections: any[];
   head_Data: any[];
   thorax_Data: any[];
+
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public pageDataService: DataService) {
 
   }

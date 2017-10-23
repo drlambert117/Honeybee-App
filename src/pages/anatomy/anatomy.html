@@ -10,29 +10,30 @@
 <ion-content padding>
 
   <ion-card *ngFor='let page of selectedPage'>
-    <img [src]="page.image_name"/>
+    <img [src]="page.image_name" />
     <ion-card-content>
       <p>{{page.page_content}}</p>
-    </ion-card-content> <br />
+    </ion-card-content>
+    <br />
 
     <button ion-button full large color='dark' id="btn-head" (click)='openHeadModal()'>
-    The Head
-  </button> 
+      The Head
+    </button>
 
     <button ion-button full large color='dark' id="btn-thorax" (click)='openThoraxModal()'>
-    The Thorax
-  </button> 
+      The Thorax
+    </button>
 
     <button ion-button full large color='dark' id="btn-abdomen" (click)='openAbdomenModal()'>
-    The Abdomen
-  </button> 
+      The Abdomen
+    </button>
 
-  </ion-card> <br /> 
-  
+  </ion-card>
+  <br />
+
   <button ion-button full large color='secondary' icon-right id='btn-next-page' (click)='goToGenderPage()'>
     Next Page
     <ion-icon name='arrow-forward'></ion-icon>
-  </button>  
+  </button>
 
 </ion-content>
-

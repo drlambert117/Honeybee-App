@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
 
+//Services
 import { DataService } from '../../../../services/data.service';
 import { IPage } from '../../../../services/page';
 
@@ -10,7 +11,7 @@ import { IPage } from '../../../../services/page';
 })
 
 export class AbdomenModal {
-  title : string = 'Anatomy of the Abdomen';
+  title: string = 'Anatomy of the Abdomen';
   pages: IPage[];
   page_data: IPage[];
   selectedPage: IPage[];
@@ -82,7 +83,7 @@ export class AbdomenModal {
     console.log("%c-----------------------", "color: green; font-weight: bold");
     this.viewCtrl.dismiss();
   }
-  
-    intro : string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
-  
+
+  intro: string = "A Honeybee's abdomen can be further broken down into 3 main components:<b> the Reproductive Organs, the Wax Glands, and the Stinger.</b>";
+
 }

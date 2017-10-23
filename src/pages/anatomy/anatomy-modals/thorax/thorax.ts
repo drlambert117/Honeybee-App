@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
 
+//Services
 import { DataService } from '../../../../services/data.service';
 import { IPage } from '../../../../services/page';
 
