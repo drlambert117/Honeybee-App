@@ -7,16 +7,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="background">
-
-  <ion-card *ngFor='let page of selectedPage'>
+<ion-content padding class="background" *ngFor='let page of selectedPage'>
 
     <img [src]="page.image_name" />
 
+  <ion-card>
+
     <ion-card-content>
-      <p>
-        {{page.page_content}}
-      </p>
+        <h2>{{page.page_content}}</h2>
     </ion-card-content>
 
   </ion-card>
