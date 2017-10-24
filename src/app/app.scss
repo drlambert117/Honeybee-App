@@ -36,6 +36,16 @@ ion-card {
         font-size: large;
     }
 
+    .background {
+        background: url("../assets/images/honeycomb2.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+
+    .frosted {
+        background-color: rgba(250, 248, 89, 0.6)
+    }
+
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
