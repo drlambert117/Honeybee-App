@@ -1,5 +1,5 @@
 <ion-header no border>
-  <ion-navbar color='bright' class="frosted" transparent >
+  <ion-navbar color='bright' class="frosted" transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -9,12 +9,12 @@
 
 <ion-content padding class="background" *ngFor='let page of selectedPage'>
 
-    <img [src]="page.image_name" />
+  <img [src]="page.image_name" />
 
   <ion-card>
 
     <ion-card-content>
-        <h2>{{page.page_content}}</h2>
+      <h2>{{page.page_content}}</h2>
     </ion-card-content>
 
   </ion-card>
