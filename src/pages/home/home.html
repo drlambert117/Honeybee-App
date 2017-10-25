@@ -8,17 +8,22 @@
 </ion-header>
 
 <ion-content padding class="background" *ngFor='let page of selectedPage'>
+
   <ion-footer>
 
-  <img [src]="page.image_name" class="img"/>
+      <img [src]="page.image_name" class="img"/>
 
-  <ion-card>
+      <ion-card>
+          <ion-card-header>
+          <h1>Welcome</h1>  
+          </ion-card-header>  
+  
+              <ion-card-content>
+                <h2>{{page.page_content}}</h2>
+              </ion-card-content>
+          
+            </ion-card>
 
-    <ion-card-content>
-      <h2>{{page.page_content}}</h2>
-    </ion-card-content>
-
-  </ion-card>
   <br />
   <button ion-button full large color='secondary' icon-right (click)='goToHoneybeePage()'>
     Section 1: What is a Honeybee?
