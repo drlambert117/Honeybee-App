@@ -9,11 +9,12 @@
 
 <ion-content padding class="background" *ngFor='let page of selectedPage'>
 
-  <ion-footer>
+  <ion-footer class="footer">
 
-      <img [src]="page.image_name" class="img"/>
+      <img [src]="page.image_name"/>
 
       <ion-card>
+
           <ion-card-header>
           <h1>Welcome</h1>  
           </ion-card-header>  
@@ -23,6 +24,8 @@
               </ion-card-content>
           
             </ion-card>
+
+
 
   <br />
   <button ion-button full large color='secondary' icon-right (click)='goToHoneybeePage()'>
