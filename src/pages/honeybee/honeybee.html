@@ -7,11 +7,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="background">
+<ion-content fullscreen padding class="background">
 
   <ion-card *ngFor='let page of selectedPage'>
 
-    <img [src]="page.image_name" id='honeybee-2' (click)="enlargePhotograph('honeybee-2')" class="img"/>
+    <img [src]="page.image_name" id='honeybee-2' (click)="enlargePhotograph('honeybee-2')"/>
     <br />
 
     <ion-card-content>

@@ -2,5 +2,7 @@
   "name": "The Marvelous Honeybee",
   "app_id": "3b1e7341",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
