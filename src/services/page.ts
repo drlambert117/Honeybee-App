@@ -6,5 +6,6 @@ export interface IPage {
     page_content: string,
     fast_fact_cards: any,
     anatomy_modals: any,
-    modal_sections: any
+    modal_sections: any,
+    page_slides:any,
 }

@@ -163,24 +163,24 @@
   "page_content": "The honeybee, though small in size, is an extremely complex creature. Like most insects, the honeybee's body is divided into three parts: the head, thorax, and abdomen. Tap each anatomical part to learn more.",
   "page_slides": [
     {
+      "slide_id":1,
       "title": "<b>The Female Queen Bee</b>",
       "description": "Royalty, with an undying sting.",
-      "image": "assets/images/honeybee_1.png",
-      "page": "QueenAboutPage"
+      "image": "assets/images/honeybee_1.png"
     },
     
     {
+      "slide_id":2,
       "title": "<b>The Female Worker Bee</b>",
       "description": "Fierce protectors, gathering nectar.",
-      "image": "assets/images/honeybee_1.png",
-      "page": "WorkerAboutPage"
+      "image": "assets/images/honeybee_1.png"
     },
 
     {
+      "slide_id":3,
       "title": "<b>The Male Drone Bee</b>",
       "description": "Short lived, and uninterested,",
-      "image": "assets/images/honeybee_1.png",
-      "page": "DroneAboutPage"
+      "image": "assets/images/honeybee_1.png"
     }
   ],
   "info_pages": [

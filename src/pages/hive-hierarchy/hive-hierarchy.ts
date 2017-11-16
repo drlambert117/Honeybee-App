@@ -1,34 +1,94 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { QueenAboutPage } from './queen-bee/about/about';
 import { DroneAboutPage } from './drone-bee/about/about';
 import { WorkerAboutPage } from './worker-bee/about/about';
+
+//Services
+import { DataService } from '../../services/data.service';
+import { IPage } from '../../services/page';
 
 @Component({
   selector: 'page-hive-hierarchy',
   templateUrl: 'hive-hierarchy.html',
 })
 export class HiveHierarchyPage {
+  title: string = 'Hierarchy of the Beehive';
+  pages: IPage[];
+  page_data: IPage[];
+  selectedPage: IPage[];
+  queenSlide_Data: any[];
+  workerSlide_Data: any[];
+  droneSlide_Data: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pageDataService: DataService, public loadingCtrl: LoadingController) {
+  }
+
+  ngOnInit() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%canatomy Component", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000,
+      dismissOnPageChange: true
+    });
+    loader.present();
+
+    this.pageDataService.getData().subscribe(data => this.extractData(data));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GenderPage');
   }
 
-  goToPageAppearance() {
+  extractData(data: any) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pages = data;
+    console.log("data:");
+    console.table(this.pages);
+
+    this.selectedPage = this.pages.filter(p => p.page_id == 5);
+    console.log("selectedPage data: ");
+    console.table(this.selectedPage);
+
+    this.queenSlide_Data = this.selectedPage[0].page_slides.filter(p => p.slide_id == 1);
+    console.log("queenSlide_Data: ");
+    console.table(this.queenSlide_Data);
+
+    this.workerSlide_Data = this.selectedPage[0].page_slides.filter(p => p.slide_id == 2);
+    console.log("queenSlide_Data: ");
+    console.table(this.queenSlide_Data);
+    
+    this.droneSlide_Data = this.selectedPage[0].page_slides.filter(p => p.slide_id == 3);
+    console.log("droneSlide_Data: ");
+    console.table(this.droneSlide_Data);
+
+  }
+
+  openQueenAboutPage() {
     this.navCtrl.push(QueenAboutPage);
-    console.log("goToPage() function called.");
+    console.log("openQueenAboutPage() called.");
   }
 
-  goToPage(page) {
-    this.navCtrl.push(page);
-    console.log("goToPage() function called.");
+  openWorkerAboutPage() {
+    this.navCtrl.push(WorkerAboutPage);
+    console.log("openWorkerAboutPage() called.");
   }
 
-  title: string = 'Hierarchy of the Beehive';
+  openDroneAboutPage() {
+    this.navCtrl.push(DroneAboutPage);
+    console.log("openDroneAboutPage() called.");
+  }
 
   intro_title: string = 'Every Honeybee has its place.';
 
