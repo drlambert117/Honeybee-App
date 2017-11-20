@@ -12,7 +12,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content fullscreen *ngFor="let page of page_data">
 
   <div padding>
     <ion-segment [(ngModel)]="segment">
@@ -39,7 +39,7 @@
           <br />
         </ion-card-header>
         <ion-card-content>
-          <h3 style="text-align:center">{{appearance_content}}</h3>
+          <h3 style="text-align:center">{{page.appearance_content}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -51,7 +51,7 @@
           <br />
         </ion-card-header>
         <ion-card-content>
-          <h3 style="text-align:center">{{anatomy_content}}</h3>
+          <h3 style="text-align:center">{{page.anatomy_content}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -63,7 +63,7 @@
           <br />
         </ion-card-header>
         <ion-card-content>
-          <h3 style="text-align:center">{{life_cycle_content}}</h3>
+          <h3 style="text-align:center">{{page.life_cycle_content}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -75,7 +75,7 @@
           <br />
         </ion-card-header>
         <ion-card-content>
-          <h3 style="text-align:center">{{function_content}}</h3>
+          <h3 style="text-align:center">{{page.function_content}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-list>
