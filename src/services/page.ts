@@ -8,4 +8,5 @@ export interface IPage {
     anatomy_modals: any,
     modal_sections: any,
     page_slides:any,
+    pages_info: any;
 }

@@ -1,13 +1,64 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, LoadingController } from 'ionic-angular';
+
+import { DataService } from '../../../../services/data.service';
+import { IPage } from '../../../../services/page';
 
 @Component({
   selector: 'page-queen-about',
   templateUrl: 'about.html'
 })
 export class QueenAboutPage {
+  title : string = 'The Queen Bee';
+  segment : string = "Appearance";
+  pages: IPage[];
+  page_data: IPage[];
+  selectedPage: IPage[];
+  appearance_Content: any[];
+  anatomy_Content: any[];
+  life_Cycle_Content: any[];
+  function_Content: any[];
 
-  constructor(public viewCtrl: ViewController) {
+
+  constructor(public viewCtrl: ViewController, public pageDataService: DataService, public loadingCtrl: LoadingController) {
+
+  }
+
+  ngOnInit() {
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+    console.log("%canatomy Component", "color: blue; font-weight: bold");
+    console.log("%c-----------------------", "color: blue; font-weight: bold");
+
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cngOnInit() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000,
+      dismissOnPageChange: true
+    });
+    loader.present();
+
+    this.pageDataService.getData().subscribe(data => this.extractData(data));
+  }
+
+  extractData(data: any) {
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+    console.log("%cextractData() function called!", "color: green; font-weight: bold");
+    console.log("%c-----------------------", "color: green; font-weight: bold");
+
+    this.pages = data;
+    console.log("data:");
+    console.table(this.pages);
+
+    this.selectedPage = this.pages.filter(p => p.page_id == 5);
+    console.log("selectedPage data: ");
+    console.table(this.selectedPage);
+
+    this.page_data = this.selectedPage[0].pages_info.filter(p => p.page_id == 2);
+    console.log("page_data: ");
+    console.table(this.page_data);
 
   }
 
@@ -29,9 +80,7 @@ export class QueenAboutPage {
 
   }
 
-    title : string = 'The Queen Bee';
-  
-    segment : string = "Appearance";
+
   
     appearance_content : string = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel molestie ligula. Phasellus euismod arcu dolor, ac commodo sapien euismod eget. 
     Suspendisse commodo nisi dui, eget luctus mi convallis non. Donec eget dapibus ex. Praesent sed consectetur leo.
