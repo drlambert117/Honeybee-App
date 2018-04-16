@@ -12,7 +12,7 @@ Used as a working project for an Independant study in Hybrid-mobile app developm
 #### I recommend reading all documentation about installation and dependencies before beginning installation.
 - <a href="https://nodejs.org/en/">Node.js</a>
 - <a href="https://angular.io/guide/setup">Angular 2 and dependencies (node.js, npm, RxJS)</a>
-- <a href="https://ionicframework.com/docs/v1/guide/installation.html">Ionic 2 and dependencies (Apache ANT, Java, Android SDK, Cordova)
+- <a href="https://ionicframework.com/docs/v1/guide/installation.html">Ionic 2 and dependencies (Apache ANT, Java, Android SDK, Cordova)</a>
 
 ## Running the project
 After cloning the repository, change your current working directory to that of the repository using the command `cd Honeybee-App`
@@ -23,4 +23,4 @@ Finally run `ionic serve`. This will run the app and display it in a broswer win
 
 
 ## Viewing the app
-If you would like to view this app on your phone, download the free Ionic View app at https://view.ionic.io/. Then go to "Preview Shared App" and enter the app ID: 7b989d13.
+If you would like to view this app on your phone, download the free <a href="https://view.ionic.io/">Ionic View app</a>. Then go to "Preview Shared App" and enter the app ID: 7b989d13.
