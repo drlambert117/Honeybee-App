@@ -2,7 +2,7 @@
 An educational app designed to inform a user about the honeybee and it's function in the natural world.
 
 ## Project Motivation
-Created as a working project for an Independant study in Hybrid-mobile app development that took place from Fall 2017 to Spring 2018. As of now, this project is added onto in my free time.
+Created as a working project for an Independant study in Hybrid-Mobile App Development that took place from Fall 2017 to Spring 2018. As of now, this project is added onto in my free time.
 
 ## Tools used in the development of this project  :wrench:
 - <a href="https://ionicframework.com/">Ionic 2</a>
